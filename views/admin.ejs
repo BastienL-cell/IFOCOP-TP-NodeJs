@@ -2,10 +2,10 @@
 <main class="container">
     <h2 class="text-center">Ajout de plats </h2>
     <a href="/liste">Liste des plats</a>
-    <form id="loginForm" method="post" action="/ajoutPlat">
+    <form id="loginForm" method="post" action="/ajoutPlat" enctype="multipart/form-data">
         <div class="form-group">
             <label for="nomPlat">Nom du plat</label>
-            <input id="nomPlat" class="form-control" name="nomPlat" type="text" value="" minlength="3" maxlength="12" required>
+            <input id="nomPlat" class="form-control" name="nomPlat" type="text" required>
         </div>
         <div class="form-group">
             <label for="descriptionPlat">Description</label>
@@ -13,11 +13,11 @@
         </div>
         <div class="form-group">
             <label for="prixPlat">Prix</label>
-            <input id="prixPlat" class="form-control" name="prixPlat" type="text"  required>
+            <input step="0.01" id="prixPlat" class="form-control" name="prixPlat" type="number"  required>
         </div>
         <div class="form-group">
             <label for="imagePlat">Image</label>
-            <input id="imagePlat" class="form-control" name="imagePlat" type="text"  required>
+            <input class="form-control" name="file" type="file"  required>
         </div>
         <div class="form-group">
             <label for="categoriePlat">Catégorie</label>
