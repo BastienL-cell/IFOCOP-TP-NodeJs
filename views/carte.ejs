@@ -1,0 +1,131 @@
+<%- include('header') -%>
+
+<main class="container">
+<!-- affichage = 0 : Valeur par défaut, pour afficher l'ensemble des éléments -->
+<!-- affichage = 1 : Valeur affichant uniquement les pizza -->
+    <% if(affichage == 0 || affichage == 1) { %>
+        <h2>Nos Pizzas !</h2>
+        <div class="row">
+            <% for(let i = 0; i < data.length ; i++) { %>
+            <% if(data[i].categorie === "Pizza") { %>
+            <article class="col-md-6 col-lg-4">
+                <div class="article-body">
+                    <h3><%= data[i].titre%></h3>
+                    <img class="img-fluid" src="/<%= data[i].image%>" alt="<%= data[i].titre%>">
+                    <p><%= data[i].description%></p>
+                </div>
+                <div class="article-footer">
+                    <a class="readmore btn-block" href="#"><%= data[i].prix %>€ Ajouter au panier <i
+                            class="fas fa-plus-circle"></i></a>
+                </div>
+            </article>
+            <% } %>
+            <% } %>
+        </div>
+    <% } %>
+    <% if(affichage == 0 || affichage == 2) { %>
+        <h2>Nos Pâtes !</h2>
+        <div class="row">
+            <% for(let i = 0; i < data.length ; i++) { %>
+            <% if(data[i].categorie === "Pates") { %>
+            <article class="col-md-6 col-lg-4">
+                <div class="article-body">
+                    <h3><%= data[i].titre%></h3>
+                    <img class="img-fluid" src="/<%= data[i].image%>" alt="<%= data[i].titre%>">
+                    <p><%= data[i].description%></p>
+                </div>
+                <div class="article-footer">
+                    <a class="readmore btn-block" href="#"><%= data[i].prix %>€ Ajouter au panier <i
+                            class="fas fa-plus-circle"></i></a>
+                </div>
+            </article>
+            <% } %>
+            <% } %>
+        </div>
+    <% } %>
+    <% if(affichage == 0 || affichage == 3) { %>
+        <h2>Nos Salades !</h2>
+        <div class="row">
+            <% for(let i = 0; i < data.length ; i++) { %>
+            <% if(data[i].categorie === "Salades") { %>
+            <article class="col-md-6 col-lg-4">
+                <div class="article-body">
+                    <h3><%= data[i].titre%></h3>
+                    <img class="img-fluid" src="/<%= data[i].image%>" alt="<%= data[i].titre%>">
+                    <p><%= data[i].description%></p>
+                </div>
+                <div class="article-footer">
+                    <a class="readmore btn-block" href="#"><%= data[i].prix %>€ Ajouter au panier <i
+                            class="fas fa-plus-circle"></i></a>
+                </div>
+            </article>
+            <% } %>
+            <% } %>
+        </div>
+    <% } %>
+    
+    <% if(affichage == 0 || affichage == 4) { %>
+        <h2>Nos Désserts !</h2>
+        <div class="row">
+            <% for(let i = 0; i < data.length ; i++) { %>
+            <% if(data[i].categorie === "Desserts") { %>
+            <article class="col-md-6 col-lg-4">
+                <div class="article-body">
+                    <h3><%= data[i].titre%></h3>
+                    <img class="img-fluid" src="/<%= data[i].image%>" alt="<%= data[i].titre%>">
+                    <p><%= data[i].description%></p>
+                </div>
+                <div class="article-footer">
+                    <a class="readmore btn-block" href="#"><%= data[i].prix %>€ Ajouter au panier <i
+                            class="fas fa-plus-circle"></i></a>
+                </div>
+            </article>
+            <% } %>
+            <% } %>
+        </div>
+    <% } %>
+
+    <% if(affichage == 0 || affichage == 5) { %>
+        <h2>Nos Boissons Fraîches !</h2>
+        <div class="row">
+            <% for(let i = 0; i < data.length ; i++) { %>
+            <% if(data[i].categorie === "Boissons-fraiches") { %>
+            <article class="col-md-6 col-lg-4">
+                <div class="article-body">
+                    <h3><%= data[i].titre%></h3>
+                    <img class="img-fluid" src="/<%= data[i].image%>" alt="<%= data[i].titre%>">
+                    <p><%= data[i].description%></p>
+                </div>
+                <div class="article-footer">
+                    <a class="readmore btn-block" href="#"><%= data[i].prix %>€ Ajouter au panier <i
+                            class="fas fa-plus-circle"></i></a>
+                </div>
+            </article>
+            <% } %>
+            <% } %>
+        </div>
+    <% } %>
+    
+    <% if(affichage == 0 || affichage == 6) { %>
+        <h2>Nos Vins !</h2>
+        <div class="row">
+            <% for(let i = 0; i < data.length ; i++) { %>
+            <% if(data[i].categorie === "Vins") { %>
+            <article class="col-md-6 col-lg-4">
+                <div class="article-body">
+                    <h3><%= data[i].titre%></h3>
+                    <img class="img-fluid" src="/<%= data[i].image%>" alt="<%= data[i].titre%>">
+                    <p><%= data[i].description%></p>
+                </div>
+                <div class="article-footer">
+                    <a class="readmore btn-block" href="#"><%= data[i].prix %>€ Ajouter au panier <i
+                            class="fas fa-plus-circle"></i></a>
+                </div>
+            </article>
+            <% } %>
+            <% } %>
+        </div>
+    <% } %>
+</main>
+
+<%- include('footer') -%>

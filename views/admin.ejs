@@ -1,0 +1,46 @@
+<%- include('header_admin') -%>
+<main class="container">
+    <h2 class="text-center">Ajout de plats </h2>
+    <a href="/liste">Liste des plats</a>
+    <form id="loginForm" method="post" action="/ajoutPlat">
+        <div class="form-group">
+            <label for="nomPlat">Nom du plat</label>
+            <input id="nomPlat" class="form-control" name="nomPlat" type="text" value="" minlength="3" maxlength="12" required>
+        </div>
+        <div class="form-group">
+            <label for="descriptionPlat">Description</label>
+            <textarea class="form-control" id="descriptionPlat" name="descriptionPlat" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="prixPlat">Prix</label>
+            <input id="prixPlat" class="form-control" name="prixPlat" type="text"  required>
+        </div>
+        <div class="form-group">
+            <label for="imagePlat">Image</label>
+            <input id="imagePlat" class="form-control" name="imagePlat" type="text"  required>
+        </div>
+        <div class="form-group">
+            <label for="categoriePlat">Catégorie</label>
+            <select name="categoriePlat" id="categoriePlat" class="form-control">
+                <option value="Pizza">Pizza</option>
+                <option value="Pates">Pâtes</option>
+                <option value="Salades">Salades</option>
+                <option value="Boissons-fraiches">Boissons fraiches</option>
+                <option value="Desserts">Désserts</option>
+                <option value="Vins">Vins</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="published" id="published">
+            <label for="published">Publié</label>
+            <input type="checkbox" name="highlighted" id="highlighted">
+            <label for="highlighted">En vedette</label>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-block">Ajouter</button>
+        </div>
+</main>
+
+
+
+<%- include('footer_admin') -%>

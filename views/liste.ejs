@@ -1,0 +1,39 @@
+<%- include('header_admin') -%>
+<main class="container">
+    <h2>Liste des plats</h2>
+    <a href="/admin">Ajouter un plat</a>
+    <table class="table">
+        <thead>
+            <td>Nom</td>
+            <td>Description</td>
+            <td>Prix</td>
+            <td>Catégorie</td>
+            <td>Publié</td>
+            <td>En vedette</td>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i < data.length; i++) { %>
+            <tr>
+                <td><%= data[i].titre%></td>
+                <td><%= data[i].description.substring(0, 30)%></td>
+                <td><%= data[i].prix%></td>
+                <td><%= data[i].categorie%></td>
+                <td><% if(data[i].published) { %>
+                    <i class="fas fa-eye green"></i>
+                    <% } else { %>
+                    <i class="fas fa-eye-slash red"></i>
+                    <% } %>
+                </td>
+                <td><% if(data[i].highlighted) { %>
+                    <i class="fas fa-star gold"></i>
+                    <% } else { %>
+                    <i class="fas fa-star grey"></i>
+                    <% } %>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</main>
+
+<%- include('footer_admin') -%>
