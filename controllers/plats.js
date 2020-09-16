@@ -20,7 +20,7 @@ exports.affichagePageCarte = (req, res) => {
 }
 
 exports.affichageCarteProduit = (req, res) => {
-    Plat.find({ categorie: req.params.id }).sort({ "highlighted": -1} ).exec((err, data) => {
+    Plat.find({ categorie: req.params.id, published: true }).sort({ "highlighted": -1} ).exec((err, data) => {
         switch(req.params.id) {
             case "Pizza":
                 affichage = 1;
